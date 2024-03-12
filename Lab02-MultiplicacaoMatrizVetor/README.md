@@ -7,7 +7,7 @@ A implementação das threads foi feita utilizando a biblioteca pthreads, e a ex
 
 Dividindo a matriz pelo número de threads disponibilizadas pelas variáveis do programa, a paralelização é maximizada para o número de threads disponíveis.
 
-![alt](/Lab02-MultiplicacaoMatrizVetor/img/1.png)
+![alt](/Lab02-MultiplicacaoMatrizVetor/ass1/1.png)
 
 ### Instalação
 Instale o git com o comando `sudo yum install git`. Com o git instalado, execute o comando `git clone https://github.com/matulevicius123/CompParalela/`.
@@ -25,7 +25,7 @@ Matriz: [1, 2, 3]
         [4, 5, 6]
         [7, 8, 9]
         
-![alt](/Lab02-MultiplicacaoMatrizVetor/img/2.png)
+![alt](/Lab02-MultiplicacaoMatrizVetor/ass1/2.png)
 
 ### Integrantes do grupo.
 - Igor Benites Moura - 10403462
