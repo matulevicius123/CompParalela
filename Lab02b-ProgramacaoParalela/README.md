@@ -3,7 +3,7 @@
 
 Utilizando uma versão adaptada do código do Lab 2 da disciplina de Computação Paralela, neste repositório mediremos a performance para completar o Lab02b.
 
-Para melhor avakuar a execução do código, ele foi programado de maneira hard-coded para gerar uma matriz de **10 mil colunas por 10 mil linhas.**
+Para melhor avalição da execução do código, ele foi programado de maneira hard-coded para gerar uma matriz de **10 mil colunas por 10 mil linhas.**
 
 Os testes serão efetuados nos programas `MMV.c`, `MMV2.c`, e `MMVSerial.c`.
 
