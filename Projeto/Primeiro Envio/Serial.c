@@ -23,14 +23,13 @@ void fatorial(int iteracoes, int bits, mpfr_t resultPonteiro) {
 }
 
 int main(int argc, char* argv[]) {
-    if (argc != 4) {
-        printf("\nErro! Execute o programa com 3 argumentos: numero de iteracoes, numero de bits, e numero de threads."); 
+    if (argc != 3) {
+        printf("\nErro! Execute o programa com 2 argumentos: numero de iteracoes e numero de bits."); 
         return 1;
     }
 
     int iteracoes = strtol(argv[1], NULL, 10);
     int bits = strtol(argv[2], NULL, 10);
-    int threads = strtol(argv[3], NULL, 10);
 
     mpfr_t result;
     mpfr_init2(result, bits);
