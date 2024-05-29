@@ -39,6 +39,15 @@ Apesar das melhorias não serem enormes, o grupo foi capaz de calcular um valor 
 
 ![image](https://github.com/matulevicius123/CompParalela/assets/142500460/04f319bb-904d-42ca-9037-bee3b7037137)
 
+
+
+
+![image](https://github.com/matulevicius123/CompParalela/assets/142500460/10944d3f-faa2-4956-8fdb-728f8c06c887)
+![image](https://github.com/matulevicius123/CompParalela/assets/142500460/216ee041-e4f4-4227-8b03-b919028822ca)
+![image](https://github.com/matulevicius123/CompParalela/assets/142500460/22f568cf-b1ba-4a81-a980-1e3b1467ac99)
+![image](https://github.com/matulevicius123/CompParalela/assets/142500460/9b37540b-6a54-48d0-ba94-813cea21f314)
+
+
 ## CPU utilizada
 
 Os detalhes da CPU utilizada para a execução dos testes está disponível no arquivo `CPU.txt`.
