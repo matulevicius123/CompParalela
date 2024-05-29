@@ -9,7 +9,7 @@ void fatorial(int iteracoes, int bits, mpfr_t resultPonteiro) {
     mpfr_set_d(atual, 1.0, MPFR_RNDU);
 
     mpfr_t div;
-    mpfr_init2(div, bits);
+    mpfr_init2(div, 53);
     mpfr_set_d(div, 1.0, MPFR_RNDU);
 
     mpfr_t add;

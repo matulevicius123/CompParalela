@@ -21,7 +21,7 @@ void fatorial(int iteracoes, int bits, mpfr_t resultPonteiro) {
     mpfr_set_d(atual, 1.0, MPFR_RNDU);
 
     mpfr_t div;
-    mpfr_init2(div, bits);
+    mpfr_init2(div, 53);
     mpfr_set_d(div, 1.0, MPFR_RNDU);
 
     mpfr_t add;
@@ -35,10 +35,19 @@ void fatorial(int iteracoes, int bits, mpfr_t resultPonteiro) {
     mpfr_init2(resultParcial, bits);
     mpfr_set_d(resultParcial, 0.0, MPFR_RNDU);
 
-    for (long int i = inicio + 2; i <= fim; ++i) {
-        mpfr_mul_si(atual, atual, i, MPFR_RNDU);
-        mpfr_div(add, div, atual, MPFR_RNDU); //infelizmente ha a necessidade de criar um numero mpfr para a divisao por 1,  
-        mpfr_add(resultParcial, resultParcial, add, MPFR_RNDU);        //ja que ha uma funcao para dividir um mpfr por um int, mas nao um int por mpfr.
+    if (posicao == 0) {
+        for (long int i = inicio + 2; i <= fim; ++i) {
+                mpfr_mul_si(atual, atual, i, MPFR_RNDU);
+                mpfr_div(add, div, atual, MPFR_RNDU); //infelizmente ha a necessidade de criar um numero mpfr para a divisao por 1,  
+                mpfr_add(resultParcial, resultParcial, add, MPFR_RNDU);        //ja que ha uma funcao para dividir um mpfr por um int, mas nao um int por mpfr.
+        }
+
+     } else {
+        for (long int i = inicio; i <= fim; ++i) {
+                mpfr_mul_si(atual, atual, i, MPFR_RNDU);
+                mpfr_div(add, div, atual, MPFR_RNDU);
+                mpfr_add(resultParcial, resultParcial, add, MPFR_RNDU);
+        }
     }
 
     mpfr_add(resultPonteiro, resultPonteiro, resultParcial, MPFR_RNDU);
