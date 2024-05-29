@@ -16,7 +16,11 @@ executando-os então com `time taskset -c [processadores desejados] /[nome do ar
 
 Vale ressaltar que GMP e MPFR devem ser instalados antes de serem utilizados. As bibliotecas podem ser baixadas nos sites https://gmplib.org/ e https://www.mpfr.org/.
 
-# Execução
+## Execução
+
+Paralelizando a série de Taylor, a função `fatorial` para calcular a série de Taylor. Nas versões paralelas, há a divisão de workload entre as threads. Após designar a cada thread seu ponto de partida, as threads iteram o fatorial até seu ponto de partida. O tempo levado para alcancar o ponto de partida era inicialmente uma dúvida quanto à viabilidade dessa tática. Posteriormente, após alcançar seu ponto de partida correto, cada thread continua iterando o fatorial enquanto divide esta iteração por um, somando-a ao seu resultado particular. Após alcançar o final de cada thread, o resultado de cada thread é somado ao resultado total, o que se torna thread-safe com a inclusão do `critical`.
+
+Nas implentações seriais, um processo similar é feito, porém com um único fluxo de execução fatorando, dividindo, e totalizando toda a série de Taylor.
 
 Para os seguintes testes, foi utilizado o `número de iterações: 10000000`, `número de bits:10000`, e uma thread pra cada core. 
 
